@@ -1,0 +1,74 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Upload section styles */
+.upload-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.upload-section h2 {
+  margin-bottom: 10px;
+}
+
+.upload-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+  background-color: #45a049;
+}
+
+/* File list table styles */
+.file-list {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header */
+.table th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Table rows */
+.table td,
+.table th {
+  border: 1px solid #dddddd;
+  padding: 10px;
+}
+
+/* Alternating row colors */
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

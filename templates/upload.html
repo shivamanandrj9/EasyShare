@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>File Upload Form</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6" align="left">
+          <h1>Hello, {{username}}</h1>
+      </div>
+      <div class="col-6" align="right">
+          <a href="/logout" type="button" class="upload-btn">Log Out</a>
+      </div>
+    </div>
+    <div class="upload-section">
+      <h2>Upload Your File</h2>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload" name="submit" class="upload-btn">
+      </form>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <div class="file-list">
+    <table
+    class="table"
+    
+  >
+    <thead>
+      <tr>
+        <th scope="col">SNo</th>
+        <th scope="col">Name</th>
+        <th scope="col">Token</th>
+
+        <th scope="col">Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for file in allFiles %}
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td>{{file.filename}}</td>
+        <td>{{file.token}}</td>
+
+        <td>
+          <a href="/delete/{{file.id}}" type="button" class="upload-btn">Delete</button>
+          <a href="/generatetoken/{{file.id}}" type="button" class="upload-btn">Generate Token</button>
+
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  
+
+</body>
+
+</html>
+
+
+
+
+
